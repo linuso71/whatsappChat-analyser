@@ -1,11 +1,8 @@
-seaborn
-matplotlib
 streamlit
-plotly.express
-wordcloud
+matplotlib
+seaborn
 urlextract
-collections
-emoji
-re
+wordcloud
 pandas
-numpy
+emoji
+plotly
