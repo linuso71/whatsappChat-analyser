@@ -105,11 +105,16 @@ if uploaded_file is not None:
             col1,col2 = st.columns(2)
 
             with col1:
-                bar = px.bar(df,x=x.index,y=x.values,labels={'x' :'Names','y':'Num of chats'})
-                st.plotly_chart(bar)
+                fig,ax=plt.subplots()
+                ax=plt.bar(x.index,x.values)
+                #bar = px.bar(df,x=x.index,y=x.values,labels={'x' :'Names','y':'Num of chats'})
+                st.pyplot(fig)
 
             with col2:
-                st.plotly_chart(px.pie(new_df,values='percentage',names='name'))
+                fig,ax=plt.subplots()
+                ax=plt.pie(new_df['percentage'],labels=new_df['name'],autopct='%0.1f%%')
+                #st.plotly_chart(px.pie(new_df,values='percentage',names='name'))
+                st.pyplot(fig)
 
         #WordCloud
         st.title('WordCloud')
