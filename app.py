@@ -111,9 +111,7 @@ if uploaded_file is not None:
                 st.pyplot(fig)
 
             with col2:
-                print(new_df)
-                fig = px.pie(values=new_df['percentage'],names=new_df['name'])
-                st.plotly_chart(fig)
+                st.dataframe(new_df)
 
         #WordCloud
         st.title('WordCloud')
