@@ -82,7 +82,7 @@ def emoji_helper(selected_user,df):
     for message in df['message']:
         emojis.extend([c for c in message if c in emoji.EMOJI_DATA])
 
-    emoji_df = pd.DataFrame(Counter(emojis).most_common(20))
+    emoji_df = pd.DataFrame(Counter(emojis).most_common(10))
 
     return emoji_df
 
