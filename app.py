@@ -149,8 +149,12 @@ if uploaded_file is not None:
             #fig,ax=plt.subplots()
             #ax.pie(emoji_df[1],labels=emoji_df[0])
 
-            fig = px.pie(values=emoji_df[1],names=emoji_df[0])
-            st.plotly_chart(fig)
+            # fig = px.pie(values=emoji_df[1],names=emoji_df[0])
+            # st.plotly_chart(fig)
+
+            fig, ax = plt.subplots()
+            ax = plt.pie(emoji_df[1], labels=emoji_df[0], autopct='%0.1f%%')
+            st.pyplot(fig)
 
 
 
