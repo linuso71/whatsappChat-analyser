@@ -1,0 +1,11 @@
+seaborn
+matplotlib
+streamlit
+plotly.express
+wordcloud
+urlextract
+collections
+emoji
+re
+pandas
+numpy
